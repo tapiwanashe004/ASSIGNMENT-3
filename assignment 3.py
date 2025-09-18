@@ -13,7 +13,7 @@ def classify_number():
             print("Invalid input. Please enter a valid number.")
 
 
-#QUESTION 3
+#QUESTION 2
 
 def calculate_average(*args):
     if not args:
@@ -21,7 +21,7 @@ def calculate_average(*args):
     return sum(args) / len(args)
 
 
-
+#Question 3
 def get_valid_number():
     while True:
         try:
@@ -193,3 +193,4 @@ def connect_to_db():
 
     conn.close()
 connect_to_db()
+
