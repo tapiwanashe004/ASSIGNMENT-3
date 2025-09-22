@@ -19,6 +19,9 @@ def calculate_average(*args):
     if not args:
         return 0
     return sum(args) / len(args)
+#example    
+print(calculate_average(10, 20, 30, 40))
+   
 
 
 #Question 3
@@ -33,7 +36,7 @@ def get_valid_number():
 
 #QUESTION 4
 def write_and_read_names():
-    names = ["Alice", "Bob", "Charlie", "David", "Eva"]
+    names = ["Kunashe", "Sharma", "Panashe", "Tanatswa", "Tapiwanashe"]
 
     with open("names.txt", "w") as file:
         for name in names:
@@ -46,7 +49,7 @@ def write_and_read_names():
 
 #QUESTION 5
 def convert_temperatures():
-    celsius_temps = [0, 10, 20, 30, 40]
+    celsius_temps = [0, 31, 10, 18, 5]
     fahrenheit_temps = list(map(lambda c: c * 9 / 5 + 32, celsius_temps))
     print("Converted temperatures:", fahrenheit_temps)
 
@@ -68,12 +71,9 @@ def divide_numbers(numerator, denominator):
 class NegativeNumberError(Exception):
     pass
 
-
 def check_positive(number):
     if number < 0:
         raise NegativeNumberError("Negative numbers are not allowed!")
-
-
 
 try:
     check_positive(-5)
@@ -129,23 +129,23 @@ import socket
 
 
 def server_program():
-    server_socket = socket.socket()  # Create a server socket
-    server_socket.bind(('localhost', 5000))  # Bind it to the address
-    server_socket.listen(1)  # Listen for one client connection
+    server_socket = socket.socket() 
+    server_socket.bind(('localhost', 5000))  
+    server_socket.listen(1)  
 
     print("Server is running and waiting for a connection...")
-    conn, addr = server_socket.accept()  # Accept a client connection
+    conn, addr = server_socket.accept()  
     print(f"Connected to {addr}")
 
     message = "Hello from server!"
-    conn.send(message.encode())  # Send the message
-    conn.close()  # Close the connection
+    conn.send(message.encode())  
+    conn.close()  
 
 
 if __name__ == '__main__':
     server_program()
 
-#Client(Client.py)
+#Client socket
 import socket
 
 
@@ -193,4 +193,5 @@ def connect_to_db():
 
     conn.close()
 connect_to_db()
+
 
